@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webcam Capturer</title>
+</head>
+
+<body>
+<img id = "webcam_id" src="capture.jpg">
+
+<script>
+    let capture = document.getElementById("webcam_id");
+    capture.src = "capture.jpg";
+
+    let num = 0;
+
+    setInterval(function() {
+        num++;
+        capture.src = `capture.jpg?t=${num}`;
+    }, 500);
+
+</script>
+
+</body>
+
+</html>
